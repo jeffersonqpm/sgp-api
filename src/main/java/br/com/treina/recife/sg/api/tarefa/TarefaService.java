@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TerefaService {
+public class TarefaService {
 
     @Autowired
     private TarefaRepository tarefaRepository;
@@ -41,9 +41,20 @@ public class TerefaService {
         return null;
     }
 
-    public Tarefa cadastrarTarefa(DadosTarefaDTO tarefa){
+    public Tarefa cadastrarTarefa(DadosTarefaDTO tarefa) {
 
         return tarefaRepository.save(tarefa.toModel());
+    }
+
+    public Tarefa atuakizarTarefa(Long id, DadosTarefaDTO dados) {
+
+        Tarefa tarefa = dados.toModel();
+        tarefa.setId(id);
+        return tarefaRepository.save(tarefa);
+    }
+
+    public void excluirTarefa(Long id) {
+        tarefaRepository.deleteById(id);
     }
 
 }

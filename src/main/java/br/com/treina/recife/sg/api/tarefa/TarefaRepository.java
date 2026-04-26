@@ -1,10 +1,9 @@
 package br.com.treina.recife.sg.api.tarefa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface TarefaRepository extends JpaRepository<Tarefa, Long>{
+@Repository
+public interface TarefaRepository extends JpaRepository<Tarefa, Long> {
 
-    
-
-    
-} 
+}
