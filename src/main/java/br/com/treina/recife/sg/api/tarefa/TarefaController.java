@@ -1,0 +1,14 @@
+package br.com.treina.recife.sg.api.tarefa;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/tarefas")
+public class TarefaController {
+
+    @Autowired
+    private Tarefa
+    
+}
